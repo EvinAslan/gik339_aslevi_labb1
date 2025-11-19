@@ -2,9 +2,9 @@
 /*Här får man fel medelande att task1 och task3 is not defined*/
 /* men för task2 får man undefined*/
 
-//console.log(task1);//
+//console.log(task1); Jag omvandlat det til commenter eftersom de croshar i console//
 console.log(task2);
-//console.log(task3);//
+//console.log(task3);Jag omvandlat det til commenter eftersom de croshar i console//
 
 
 { let task1 = 10;
@@ -17,9 +17,9 @@ console.log(task2);
  /* här får vi  alla värden ut i console.*/
 }
 
-//console.log(task1);//
+//console.log(task1);Jag omvandlat det til commenter eftersom de croshar i console//
 console.log(task2);
-//console.log(task3);
+//console.log(task3);Jag omvandlat det til commenter eftersom de croshar i console//
 /*Här får man fel medelande att task1 och task3 is not defined*/ 
 /* men för task2 får vi värden ut i console eftersom "var" fungerar utanför också.*/
 
@@ -45,11 +45,13 @@ console.log(result); //-> det visar falsy i consolen
 
 /*UPPGIFT 4*/
 /*Del 1 och Del 2*/
+
 function greet(name){
   return "Hej" + name;
 }
 console.log(greet(" Mikaela1"));
-// Detta är en funktionsdeklaration
+// Detta är en funktionsdeklaration. Den hoistas vilket betyder att den kan anropas även före redan där den är definerad.
+// Jag valde att använde dessa tre olika funktion så jag kan se skilnaden mellan deras funktionalitet. //
 
 
 
@@ -57,7 +59,8 @@ const greet2= function(name) {
   return "Hej" + name;
 }
 console.log(greet2(" Mikaela2"));
-// Detta är en funktionsuttryck
+// Detta är en funktionsuttryck. Funtionen lagras i variabeln greet2 och hoistas inte på samma sätt som en funktiondeklaration. 
+// Därför kan det bara anropas efter att redan där funktionen tilldelas har körsts.// 
 
 
 
@@ -67,7 +70,7 @@ const greet3 = (name) => {
 
 }
 console.log(greet3("Mikaela3"));
-//Detta är en arrowfunktion
+//Detta är en arrowfunktion och de hoistas inte de kan bara anropas efter att redab där de definieras har körts.//
 
 
 const greet1 = (name) => {
@@ -76,24 +79,34 @@ const greet1 = (name) => {
 };
 let message1 = greet1("Mikaela");
 console.log(message1);
+//Detta är också en arrowfunktion och här sparas returvärdet i variabeln message1 innan det skrivs ut. 
+// Arrowfuntioner hoistas inte de kan bara anropas efter.
+
 
 
 //DEl 3//
 
-//det ligger i roten av scriptet//
+//Global variabel i roten av scriptet//
 
 let name = "snöa"; 
 console.log("Det kommer att" , name);
+//Detta är den globala variabeln name och den ligger i roten av scriptet och 
+// den kan användas både före och efter funtionerna.//
+
 
 const greet4 = (name) => {
   console.log("Det är dåligt med" , name);
   return "Det kommer att" + name;
 }
-console.log(greet4(" regna"));
+console.log(greet4(" regna"));//Detta är en arrowfuntion och där parametern name inne i funtionen är ett eget värde 
+// och är inte samma den globaba name. 
+// När vi anropar funtionen med regna får den lokala name värdet regna. 
+// Den globala variabel name utanför funtionen ändras inte.
 
-console.log("Vill du att det ska", name);
+console.log("Vill du att det ska", name);// Här skrivs den globala variabeln name ut igen 
+// men parametern i greet4 ändrar inte den globala variabeln så värdet är fortfarande snöa.//
 
 
-//reflektioner//
+
 
 
