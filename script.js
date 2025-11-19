@@ -94,5 +94,6 @@ console.log(greet4(" regna"));
 console.log("Vill du att det ska", name);
 
 
+//reflektioner//
 
 
