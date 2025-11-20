@@ -2,14 +2,14 @@
 /*Här får man fel medelande att task1 och task3 is not defined*/
 /* men för task2 får man undefined*/
 
-//console.log(task1); Jag omvandlat det til commenter eftersom de croshar i console//
+//console.log(task1); Jag omvandlat det til kommenter eftersom de croshar i console//
 console.log(task2);
-//console.log(task3);Jag omvandlat det til commenter eftersom de croshar i console//
+//console.log(task3);Jag omvandlat det til kommenter eftersom de croshar i console//
+//refkeltion uppfgit 2 punk1..........................
 
-
-{ let task1 = 10;
-  var task2 = 20;
-  const task3 = 30;
+{ let task1 = 10; // "let" är blockscope när jag lag de utanför fick jag fel medelande "is not defined"
+  var task2 = 20; // "var" är inte blockscope vilket betyder att variabeln gäller både inuti och utanför blocket.
+  const task3 = 30; // "const" är blockscope när jag lag de utanför fick jag fel medelande "is not defined"
   console.log(task1);
   console.log(task2);
   console.log(task3);
@@ -17,9 +17,9 @@ console.log(task2);
  /* här får vi  alla värden ut i console.*/
 }
 
-//console.log(task1);Jag omvandlat det til commenter eftersom de croshar i console//
+//console.log(task1);Jag omvandlat det til kommenter eftersom de croshar i console//
 console.log(task2);
-//console.log(task3);Jag omvandlat det til commenter eftersom de croshar i console//
+//console.log(task3);Jag omvandlat det til kommenter eftersom de croshar i console//
 /*Här får man fel medelande att task1 och task3 is not defined*/ 
 /* men för task2 får vi värden ut i console eftersom "var" fungerar utanför också.*/
 
@@ -34,7 +34,7 @@ console.log(null===undefined); /*Här får vi false i console*/
 // null är ett värde när programen själv sätter för att visa att nogåt medvetet är tomt.
 
 let result = undefined ? "truthy" : "falsy";
-console.log(result); //-> det visar falsy i consolen
+console.log(result); //-> detta är en ternary operator och det visar falsy i consolen
 
 
 //undefined ? "truthy" : "falsy"// När detta uttryck står för sig sjäv syns ingen i consolen 
@@ -50,6 +50,8 @@ function greet(name){
   return "Hej" + name;
 }
 console.log(greet(" Mikaela1"));
+let message = greet(" Mikaela");
+console.log(message);
 // Detta är en funktionsdeklaration. Den hoistas vilket betyder att den kan anropas även före redan där den är definerad.
 // Jag valde att använde dessa tre olika funktion så jag kan se skilnaden mellan deras funktionalitet. //
 
@@ -92,7 +94,9 @@ let name = "snöa";
 console.log("Det kommer att" , name);
 //Detta är den globala variabeln name och den ligger i roten av scriptet och 
 // den kan användas både före och efter funtionerna.//
-
+{
+  console.log(name);
+}
 
 const greet4 = (name) => {
   console.log("Det är dåligt med" , name);
@@ -105,6 +109,10 @@ console.log(greet4(" regna"));//Detta är en arrowfuntion och där parametern na
 
 console.log("Vill du att det ska", name);// Här skrivs den globala variabeln name ut igen 
 // men parametern i greet4 ändrar inte den globala variabeln så värdet är fortfarande snöa.//
+
+
+
+
 
 
 
