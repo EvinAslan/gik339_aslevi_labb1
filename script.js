@@ -30,7 +30,7 @@ console.log(NaN===NaN); /*Här får vi false i console*/
 console.log(null==undefined); /* Här får vi true i console*/
 console.log(null===undefined); /*Här får vi false i console*/
 // NaN betyder not a number och det uppstår när en ogiltig beräkning görs. NaN är aldrig lika med något, inte ens sig själv. 
-// undefined är en variabel som har inget värde. 
+// undefined är en variabel som finns men inte har fått något värde. 
 // null är ett värde när programen själv sätter för att visa att nogåt medvetet är tomt.
 
 let result = undefined ? "truthy" : "falsy";
