@@ -5,7 +5,6 @@
 //console.log(task1); Jag omvandlat det til kommenter eftersom de croshar i console//
 console.log(task2);
 //console.log(task3);Jag omvandlat det til kommenter eftersom de croshar i console//
-//refkeltion uppfgit 2 punk1..........................
 
 { let task1 = 10; // "let" är blockscope när jag lag de utanför fick jag fel medelande "is not defined"
   var task2 = 20; // "var" är inte blockscope vilket betyder att variabeln gäller både inuti och utanför blocket.
@@ -24,17 +23,19 @@ console.log(task2);
 /* men för task2 får vi värden ut i console eftersom "var" fungerar utanför också.*/
 
 /*UPPGIFT 3*/
-console.log("3"==3); /* Här får vi true i console*/
-console.log("3"===3); /*Här får vi false i console*/
+console.log("3"==3); /* == detta kalas för loose equality. Den försöker omvandla värdena till samma typ och jämför sedan värdena. Här får vi true i console*/
+console.log("3"===3); /*=== detta kalas för strikt jämförelse vilket den jämför typ och även värde. Här får vi false i console*/
+console.log(NaN==NaN); /*Här får vi false i console. Det spelar ingen roll om vi använder == eller === kommer vi alltid false i console 
+efterson NaN är den ända värde i hela JavaScript som inte är lika med sig själv*/
 console.log(NaN===NaN); /*Här får vi false i console*/
-console.log(null==undefined); /* Här får vi true i console*/
-console.log(null===undefined); /*Här får vi false i console*/
+console.log(null==undefined); /* Här gör vi loose equality och får vi true i console vilket betyder båda är inget värde men på olika sätt*/
+console.log(null===undefined); /*Här gör vi strikt jämförelse och får vi false i console eftersom de är olika typer*/
 // NaN betyder not a number och det uppstår när en ogiltig beräkning görs. NaN är aldrig lika med något, inte ens sig själv. 
 // undefined är en variabel som finns men inte har fått något värde. 
 // null är ett värde när programen själv sätter för att visa att nogåt medvetet är tomt.
 
 let result = undefined ? "truthy" : "falsy";
-console.log(result); //-> detta är en ternary operator och det visar falsy i consolen
+console.log(result); /* detta är en ternary operator och det visar falsy i consolen*/
 
 
 //undefined ? "truthy" : "falsy"// När detta uttryck står för sig sjäv syns ingen i consolen 
