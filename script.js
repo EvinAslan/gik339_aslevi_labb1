@@ -116,7 +116,10 @@ men parametern i greet4 ändrar inte den globala variabeln så värdet är fortf
 
 
 
-
+/* 
+En parameter är namnet i fuktionshuvudet exempel från min kod name i funktionen greet(name)
+Ett argument är värdet  jag skickar in när jag anropar funtionen exempelvis "Mikaela i greet("Mikaela").
+En variabel är ett namn som lagrar ett värde i koden exempelvis let name = "snöa" */
 
 
 
